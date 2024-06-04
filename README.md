@@ -93,7 +93,6 @@ python visdrone_style_eval.py ./data/VisDrone configs/dino-5scale_swin-l_8xb2-12
 
 ```shell
 python visdrone_style_eval.py ./data/VisDrone configs/Detic_LI21k_CLIP_SwinB_896b32_4x_ft4x_max-size.py ./checkpoint/detic_centernet2_swin-b_fpn_4x_lvis-coco-in21k_20230120-0d301978.pth -t visdrone_cls_name.txt -o ./output/Detic_LI21k_CLIP_SwinB_896b32_4x_ft4x_max-size -b 0.01
-
 ```
 
 ### Grounding Object Detection

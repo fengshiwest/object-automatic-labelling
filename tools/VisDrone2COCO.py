@@ -37,7 +37,6 @@ def main():
     for idx, filename in enumerate(os.listdir(image_root)):
         img_data = cv2.imread(os.path.join(image_root, filename))
         h, w, c = img_data.shape
-        # print(img_data.shape)
         image = {
             'file_name': filename,
             'height': h,

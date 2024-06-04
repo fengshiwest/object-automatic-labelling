@@ -1,4 +1,3 @@
-# Copyright (c) OpenMMLab. All rights reserved.
 _base_ = 'mmdet::common/lsj-200e_coco-detection.py'
 
 custom_imports = dict(
