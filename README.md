@@ -1,16 +1,16 @@
 ## Overview
 
-![pipeline](assets/automatic_labelling_pipeline.png)
+![pipeline](assets/object_automatic_labeling_pipeline.png)
 
 ## Highlight
 
-- [x] Automatic labelling of objects without training.
+- [x] Automatic labeling of objects without training.
 
 - [x] Support representative UAV object detection datasets, include [VisDrone](https://github.com/VisDrone/VisDrone-Dataset).
 
 ## TODO
 
- - [x] Release the labelling code.
+ - [x] Release the labeling code.
 
 ## Data Prepare
 
@@ -43,8 +43,8 @@ You will get the dataset folder structure as:
 ## Environment Prepare
 
 ```shell
-conda create -n automatic-labelling python=3.8 -y
-conda activate automatic-labelling
+conda create -n automatic-labeling python=3.8 -y
+conda activate automatic-labeling
 pip install torch==1.9.1+cu111 torchvision==0.10.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html
 pip install mmengine
 
@@ -59,7 +59,7 @@ pip install git+https://github.com/openai/CLIP.git
 ```
 
 
-## Labelling
+## labeling
 
 First download the following checkpoints and save to './checkpoint'
 
@@ -109,7 +109,7 @@ python visdrone_style_eval.py ./data/VisDrone configs/GroundingDINO_SwinT_OGC.py
 python visdrone_style_eval.py ./data/VisDrone configs/glip_Swin_L.yaml ./checkpoint/glip_large_model.pth -t visdrone_cls_name.txt -o ./output/glip_large_model -b 0.01
 ```
 
-## Single Image Labelling
+## Single Image labeling
 
 ```shell
 python detector_sam_demo.py ./data/VisDrone/VisDrone2019-DET-val/images/0000001_02999_d_0000005.jpg configs/Detic_LI21k_CLIP_SwinB_896b32_4x_ft4x_max-size.py ./checkpoint/detic_centernet2_swin-b_fpn_4x_lvis-coco-in21k_20230120-0d301978.pth -t car
